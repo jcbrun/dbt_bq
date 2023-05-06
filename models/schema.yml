@@ -80,3 +80,15 @@ models:
         description: Amount of the order (AUD) paid for by gift card
         tests:
           - not_null
+
+
+seeds:
+  - name: raw_customers
+    description: Cette table est la table dans la zone raw chargé à partir du fichier csv placé dans seeds.
+
+    columns:
+      - name: customer_id
+        description: Ceci est l'identifiant unique du client
+        tests:
+          - unique
+          - not_null

@@ -1,3 +1,7 @@
+{{ config(
+  materialized='table',
+  schema='bview'
+) }}
 with customers as (
 
     select * from {{ ref('stg_customers') }}
